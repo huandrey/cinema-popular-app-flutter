@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "896558735087",
+    "project_id": "nosso-cinema-popular",
+    "storage_bucket": "nosso-cinema-popular.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896558735087:android:cf700c0898676d6af6051a",
+        "android_client_info": {
+          "package_name": "br.com.spectrum.cinema.popular"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtCkwAHl0Aid1Jj8ZmzwkPAd4ycBs18NE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896558735087:android:4cf1ac847863cbf3f6051a",
+        "android_client_info": {
+          "package_name": "com.example.cinema_popular"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtCkwAHl0Aid1Jj8ZmzwkPAd4ycBs18NE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
