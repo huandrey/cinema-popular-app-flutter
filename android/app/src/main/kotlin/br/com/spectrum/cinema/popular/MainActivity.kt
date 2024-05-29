@@ -1,4 +1,4 @@
-package com.example.cinema_popular
+package br.com.spectrum.cinema.popular
 
 import io.flutter.embedding.android.FlutterActivity
 
