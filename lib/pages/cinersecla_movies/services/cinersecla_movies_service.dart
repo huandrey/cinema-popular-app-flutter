@@ -6,7 +6,6 @@ class CinerseclaMoviesService {
 
   Future<List<CinerseclaMovie>> getMovies() async {
     final response = await cinerseclaApi.getMoviesFromCinersecla();
-    print(response);
     return response;
   }
 }

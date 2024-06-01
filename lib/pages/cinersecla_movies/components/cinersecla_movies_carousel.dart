@@ -18,24 +18,33 @@ class CinerseclaMoviesCarousel extends StatefulWidget {
 
 class _CinerseclaMoviesCarouselState extends State<CinerseclaMoviesCarousel> {
   int current = 0;
+
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
       carouselController: CarouselController(),
       options: CarouselOptions(
+        autoPlay: true,
+        autoPlayAnimationDuration: const Duration(milliseconds: 800),
+        autoPlayCurve: Curves.fastOutSlowIn,
         onPageChanged: (index, reason) {
           setState(() {
             current = index;
           });
         },
-        height: 550,
-        aspectRatio: 16.9,
+        height: 520,
         enlargeCenterPage: true,
       ),
-      items: widget.movies.map((movie) {
+      items: widget.movies.asMap().entries.map((entry) {
+        int index = entry.key;
+        CinerseclaMovie movie = entry.value;
+
         return Builder(
           builder: (BuildContext context) {
-            return CinerseclaMoviesContainer(movie: movie);
+            return CinerseclaMoviesContainer(
+              movie: movie,
+              isSelected: current == index,
+            );
           },
         );
       }).toList(),
