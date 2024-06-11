@@ -1,4 +1,4 @@
-import 'package:cinema_popular/pages/register/components/register_content.dart';
+import 'package:cinema_popular/pages/register/widgets/register_content.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {

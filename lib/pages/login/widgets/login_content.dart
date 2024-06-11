@@ -1,5 +1,5 @@
 import 'package:cinema_popular/pages/auth/auth_service.dart';
-import 'package:cinema_popular/pages/login/components/section_to_login_with_others_services.dart';
+import 'package:cinema_popular/pages/login/widgets/section_to_login_with_others_services.dart';
 import 'package:cinema_popular/pages/login/login_controller.dart';
 import 'package:cinema_popular/shared/widgets/my_button.dart';
 import 'package:cinema_popular/shared/widgets/my_text_field.dart';

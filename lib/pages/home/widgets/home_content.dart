@@ -1,6 +1,6 @@
 import 'package:cinema_popular/pages/cinersecla_movies/cinersecla_movies_page.dart';
-import 'package:cinema_popular/pages/home/components/home_option.dart';
-import 'package:cinema_popular/pages/home/components/home_retail_media.dart';
+import 'package:cinema_popular/pages/home/widgets/home_option.dart';
+import 'package:cinema_popular/pages/home/widgets/home_retail_media.dart';
 import 'package:flutter/material.dart';
 
 class HomeContent extends StatelessWidget {
