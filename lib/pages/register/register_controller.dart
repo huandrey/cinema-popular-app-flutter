@@ -26,7 +26,6 @@ class RegisterController {
   }
 
   bool validate() {
-    print(usernameController.text);
     return emailController.text.isNotEmpty &&
         passwordController.text.isNotEmpty &&
         confirmPasswordController.text.isNotEmpty &&

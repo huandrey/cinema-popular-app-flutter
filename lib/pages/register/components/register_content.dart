@@ -1,7 +1,7 @@
 import 'package:cinema_popular/pages/auth/auth_service.dart';
 import 'package:cinema_popular/pages/register/register_controller.dart';
-import 'package:cinema_popular/shared/components/my_button.dart';
-import 'package:cinema_popular/shared/components/my_text_field.dart';
+import 'package:cinema_popular/shared/widgets/my_button.dart';
+import 'package:cinema_popular/shared/widgets/my_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,84 +1,83 @@
 import 'package:cinema_popular/pages/cinersecla_movies/cinersecla_movies_page.dart';
+import 'package:cinema_popular/pages/home/components/home_option.dart';
+import 'package:cinema_popular/pages/home/components/home_retail_media.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeContent extends StatelessWidget {
   const HomeContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(top: 32.0),
+      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.tertiary,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(24.0),
+          topRight: Radius.circular(24.0),
+        ),
+      ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 16),
+          const SizedBox(height: 32),
           Text(
-            'Opções de navegação',
-            style: GoogleFonts.poppins(
-              textStyle: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            'Olá, John 👋',
+            style: Theme.of(context).textTheme.headlineLarge,
           ),
-          SizedBox(height: 32),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CinerseclaMoviesPage(),
-                ),
-              );
-            },
-            child: Container(
-              width: 160,
-              height: 160,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
-                borderRadius: BorderRadius.circular(10),
+          const SizedBox(
+            height: 36,
+          ),
+          Text(
+            'Opções para você',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [
+              HomeOption(
+                  labelOption: 'Cinersecla',
+                  pathImg: 'lib/assets/images/cinersecla.png',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CinerseclaMoviesPage(),
+                      ),
+                    );
+                  }),
+              const SizedBox(width: 16),
+              HomeOption(
+                labelOption: 'Clube Memorial',
+                pathImg: 'lib/assets/images/clube_memorial.png',
+                onTap: () {},
               ),
-              child: Center(
-                child: Text(
-                  'Cinersecla',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
+            ],
+          ),
+          const SizedBox(height: 36),
+          const HomeRetailMedia(),
+          const SizedBox(height: 36),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+            decoration: BoxDecoration(
+              color: Colors.amber.shade400,
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Text(
+              textAlign: TextAlign.center,
+              'Esse aplicativo ainda está em fase de teste, qualquer sugestão será bem vinda sempre',
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    letterSpacing: 0.5,
+                    color: Colors.grey.shade400,
+                    fontWeight: FontWeight.w300,
                   ),
-                ),
-              ),
             ),
-          ),
-          SizedBox(height: 16),
-          GestureDetector(
-            child: Container(
-              width: 160,
-              height: 160,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Text(
-                  'Clube Memorial',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          )
         ],
       ),
     );

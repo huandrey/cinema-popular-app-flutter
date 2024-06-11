@@ -1,9 +1,9 @@
 import 'package:cinema_popular/pages/auth/auth_service.dart';
 import 'package:cinema_popular/pages/login/components/section_to_login_with_others_services.dart';
 import 'package:cinema_popular/pages/login/login_controller.dart';
-import 'package:cinema_popular/shared/components/my_button.dart';
-import 'package:cinema_popular/shared/components/my_text_field.dart';
-import 'package:cinema_popular/shared/components/square_tile.dart';
+import 'package:cinema_popular/shared/widgets/my_button.dart';
+import 'package:cinema_popular/shared/widgets/my_text_field.dart';
+import 'package:cinema_popular/shared/widgets/square_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -38,6 +38,7 @@ class LoginContent extends StatelessWidget {
               'Cinema Popular',
               textAlign: TextAlign.center,
               style: GoogleFonts.lexendExa(
+                color: Theme.of(context).colorScheme.inversePrimary,
                 fontSize: 24,
                 fontWeight: FontWeight.w800,
                 letterSpacing: 0.5,
