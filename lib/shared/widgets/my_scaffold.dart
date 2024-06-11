@@ -24,17 +24,24 @@ class MyScaffold extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text(title),
+        title: Padding(
+          padding: const EdgeInsets.only(top: 4.0),
+          child: Image.asset(
+            'lib/assets/images/logo.png',
+            width: 220,
+            fit: BoxFit.contain,
+          ),
+        ),
         backgroundColor: Theme.of(context).colorScheme.background,
         foregroundColor: Colors.grey,
         elevation: 0,
         actions: [
-          showLogoutAction == true
-              ? IconButton(
-                  icon: const Icon(Icons.logout),
-                  onPressed: authService.logout,
-                )
-              : Container(),
+          IconButton(
+            icon: const Icon(
+              Icons.help_outline_rounded,
+            ),
+            onPressed: authService.logout,
+          )
         ],
       ),
       drawer: drawer,

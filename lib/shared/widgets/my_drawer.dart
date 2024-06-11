@@ -14,21 +14,22 @@ class MyDrawer extends StatelessWidget {
           Column(
             children: [
               DrawerHeader(
-                child: Icon(
-                  Icons.message,
-                  size: 80,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
+                  child: Icon(
+                size: 100,
+                Icons.movie_filter_sharp,
+                color: Theme.of(context).colorScheme.primary,
+              )),
               Padding(
                 padding: const EdgeInsets.only(
                   left: 24.0,
                 ),
                 child: ListTile(
                   leading: const Icon(Icons.home),
-                  title: const Text(
+                  title: Text(
                     'H O M E',
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
                   onTap: () => Navigator.pop(context),
                 ),
@@ -40,20 +41,7 @@ class MyDrawer extends StatelessWidget {
                 child: ListTile(
                   leading: const Icon(Icons.person),
                   title: const Text(
-                    'P R O F I L E',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  onTap: () => Navigator.pop(context),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 24.0,
-                ),
-                child: ListTile(
-                  leading: const Icon(Icons.group),
-                  title: const Text(
-                    'U S E R S',
+                    'P E R F I L',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   onTap: () => Navigator.pop(context),
