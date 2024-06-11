@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cinema_popular/pages/cinersecla_movies/components/cinersecla_movies_container.dart';
+import 'package:cinema_popular/pages/cinersecla_movies/widgets/cinersecla_movies_container.dart';
 import 'package:cinema_popular/pages/cinersecla_movies/models/cinersecla_movie_model.dart';
 import 'package:flutter/material.dart';
 

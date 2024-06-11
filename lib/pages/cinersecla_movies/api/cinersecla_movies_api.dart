@@ -3,10 +3,10 @@ import 'package:http/http.dart' as http;
 import 'package:cinema_popular/pages/cinersecla_movies/models/cinersecla_movie_model.dart';
 
 class CinerseclaMoviesApi {
-  static const BASE_URL = "http://localhost:8000/";
+  static const BASE_URL = "http://localhost:3333/";
 
   Future<List<CinerseclaMovie>> getMoviesFromCinersecla() async {
-    final response = await http.get(Uri.parse(BASE_URL + "films"));
+    final response = await http.get(Uri.parse(BASE_URL + "movies"));
 
     if (response.statusCode == 200) {
       final body = json.decode(response.body)['data'] as List;

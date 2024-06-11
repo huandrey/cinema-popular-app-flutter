@@ -35,11 +35,11 @@ class CinerseclaMovie {
   // create a method fromJson that iterate a list and create a cinerseclaMovie object
   factory CinerseclaMovie.fromJson(Map<String, dynamic> json) {
     return CinerseclaMovie(
-      id: json['id'],
+      id: json['id'] ?? '',
       title: json['title'],
       image: json['image'],
-      phrase: json['phrase'],
-      hours: json['hours'],
+      phrase: json['phrase'] ?? '',
+      hours: json['hours'] ?? [],
       director: json['director'],
       cast: json['cast'],
       classification: json['classification'],
@@ -48,7 +48,40 @@ class CinerseclaMovie {
       duration: json['duration'],
       genre: json['genre'],
       status: json['status'],
-      rating: json['rating'],
+    );
+  }
+
+  CinerseclaMovie copyWith({
+    String? id,
+    String? title,
+    String? image,
+    String? phrase,
+    List<dynamic>? hours,
+    List<dynamic>? cast,
+    String? classification,
+    String? description,
+    String? director,
+    String? distributor,
+    String? duration,
+    String? genre,
+    String? status,
+    String? rating,
+  }) {
+    return CinerseclaMovie(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      image: image ?? this.image,
+      phrase: phrase ?? this.phrase,
+      hours: hours ?? this.hours,
+      cast: cast ?? this.cast,
+      classification: classification ?? this.classification,
+      description: description ?? this.description,
+      director: director ?? this.director,
+      distributor: distributor ?? this.distributor,
+      duration: duration ?? this.duration,
+      genre: genre ?? this.genre,
+      status: status ?? this.status,
+      rating: rating ?? this.rating,
     );
   }
 

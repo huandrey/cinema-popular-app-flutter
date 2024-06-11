@@ -1,5 +1,7 @@
+import 'package:cinema_popular/pages/cinersecla_movie_details/cinersecla_movie_details_page.dart';
 import 'package:cinema_popular/pages/cinersecla_movies/models/cinersecla_movie_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CinerseclaMoviesContainer extends StatelessWidget {
@@ -29,13 +31,28 @@ class CinerseclaMoviesContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(12.0),
-            child: Image.network(
-              movie.image,
-              width: double.infinity,
-              height: 310,
-              fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CinerseclaMovieDetailsPage(
+                    movie: movie,
+                  ),
+                ),
+              );
+            },
+            child: Hero(
+              tag: 'hero-tag-${movie.image}',
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12.0),
+                child: Image.network(
+                  movie.image,
+                  width: double.infinity,
+                  height: 310,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ),
           const SizedBox(height: 16),
@@ -76,7 +93,7 @@ class CinerseclaMoviesContainer extends StatelessWidget {
                         ? Container(
                             height: 60,
                             width: MediaQuery.of(context).size.width * 0.8,
-                            padding: const EdgeInsets.symmetric(horizontal: 24),
+                            padding: const EdgeInsets.symmetric(horizontal: 0),
                             child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 itemCount: movie.hours.length,
@@ -117,7 +134,7 @@ class CinerseclaMoviesContainer extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 12),
                             decoration: BoxDecoration(
-                              color: Colors.yellow.shade800,
+                              color: Theme.of(context).colorScheme.primary,
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Center(

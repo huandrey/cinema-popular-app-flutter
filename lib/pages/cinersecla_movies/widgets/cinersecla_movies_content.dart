@@ -1,5 +1,5 @@
-import 'package:cinema_popular/pages/cinersecla_movies/components/cinersecla_movies_carousel.dart';
-import 'package:cinema_popular/pages/cinersecla_movies/components/day/day_content.dart';
+import 'package:cinema_popular/pages/cinersecla_movies/widgets/cinersecla_movies_carousel.dart';
+import 'package:cinema_popular/pages/cinersecla_movies/widgets/day/day_content.dart';
 import 'package:cinema_popular/pages/cinersecla_movies/models/cinersecla_movie_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,13 +8,13 @@ class CinerseclaMoviesContent extends StatelessWidget {
   List<CinerseclaMovie> movies;
 
   Map<String, int> days = {
-    'Qui': 21,
-    'Sex': 22,
-    'Sáb': 23,
-    'Dom': 24,
-    'Seg': 25,
-    'Ter': 26,
-    'Qua': 27,
+    'Qui': 30,
+    'Sex': 31,
+    'Sáb': 1,
+    'Dom': 2,
+    'Seg': 3,
+    'Ter': 4,
+    'Qua': 5,
   };
 
   CinerseclaMoviesContent({
@@ -36,20 +36,10 @@ class CinerseclaMoviesContent extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Dias da semana',
-                style: GoogleFonts.poppins(
-                  textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
               const SizedBox(
                 height: 16,
               ),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 60,
                 child: ListView.builder(
