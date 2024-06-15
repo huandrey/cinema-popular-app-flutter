@@ -9,7 +9,6 @@ class CinerseclaMovieDetailsApi {
     final response = await http.get(Uri.parse("${BASE_URL}movie/$id"));
     if (response.statusCode == 200) {
       final body = json.decode(response.body)['data'];
-      print(CinerseclaMovie.fromJson(body));
       return CinerseclaMovie.fromJson(body);
     } else {
       throw Exception('Failed to load movies');

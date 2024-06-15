@@ -37,7 +37,7 @@ class CinerseclaMovieDetails extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
-              movie?.description ?? '',
+              movie.description ?? '',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     height: 1.3,
                     letterSpacing: 0.5,
@@ -57,7 +57,7 @@ class CinerseclaMovieDetails extends StatelessWidget {
           ),
           Center(
             child: Text(
-              movie?.director ?? '',
+              movie.director ?? '',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     height: 1.3,
                     letterSpacing: 0.5,
