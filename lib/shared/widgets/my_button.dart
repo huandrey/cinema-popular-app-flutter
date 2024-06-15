@@ -13,7 +13,6 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(Theme.of(context).colorScheme.primary);
     return GestureDetector(
       onTap: onTap,
       child: Container(
